@@ -1,20 +1,36 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import { createLink, fetchLinks } from '../services/shortenerAPICalls';
 import Form from '../components/form/Form';
+import ShortUrlList from '../components/shortener/ShortUrlList';
 
-const ShortenContainer = (props) => {
+const ShortenContainer = () => {
+  const [url, setUrl] = useState(''); 
+  const [links, setLinks] = useState([]);
+
+  useEffect(() => {
+    fetchLinks()
+      .then(links => setLinks(ls => [...ls, ...links]));
+  }, []);
+
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    createLink(url)
+      .then(link => setLinks(links => [...links, link]));
+  };
+
+  const handleChange = e => setUrl(e.target.value);
+
+  console.log(url, 'url');
+  console.log(links, 'link');
 
   return (
     <div>
       {/* Takes in Form and List to contain */}
-      <Form />
+      <Form url={url} onSubmit={handleSubmit} onChange={handleChange} />
+      <ShortUrlList links={links} />
     </div>
   );
-};
-
-ShortenContainer.propTypes = {
-
 };
 
 export default ShortenContainer;
