@@ -1,5 +1,7 @@
 import React from 'react';
+import ShortenContainer from '../../containers/ShortenContainer';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  // Take in container
+  return <ShortenContainer />;
 }
