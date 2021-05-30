@@ -6,7 +6,7 @@ export const createLink = url => {
   return fetch(`${SHORTENER_BACKEND_URL}/api/v1/shorten`, {
     method: 'POST', 
     headers: {
-      'Content-type': 'application/json'
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify({ url })
   })
@@ -18,4 +18,11 @@ export const createLink = url => {
 };
 
 // fetch links
-
+export const fetchLinks = () => {
+  return fetch(`${SHORTENER_BACKEND_URL}/api/v1/shorten`)
+    .then(res => res.json())
+    .then(json => json.map(link => ({
+      shortenedUrl: `${SHORTENER_BACKEND_URL}/${link.id}`, 
+      originalUrl: link.originalUrl
+    })));
+};
