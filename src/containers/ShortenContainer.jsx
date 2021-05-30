@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { createLink, fetchLinks } from '../services/shortenerAPICalls';
+import Form from '../components/form/Form';
 
 const ShortenContainer = (props) => {
-  const [url, setUrl] = useState(''); 
-  const [links, setLinks] = useState([]);
+
   return (
     <div>
       {/* Takes in Form and List to contain */}
+      <Form />
     </div>
   );
 };
