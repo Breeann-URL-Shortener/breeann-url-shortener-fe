@@ -5,6 +5,7 @@ import {
   Switch
 } from 'react-router-dom';
 import ShortenContainer from '../../containers/ShortenContainer';
+import LandingPage from '../landingpage/LandingPage';
 import Login from '../auth/Login';
 import Signup from '../auth/Signup';
 import PrivateRoute from '../auth/PrivateRoute';
@@ -16,7 +17,8 @@ export default function App() {
     <Router>
       <AuthProvider>
         <Switch>
-          <PrivateRoute exact path="/" component={ShortenContainer}/>
+          <PrivateRoute exact path="/shorten" component={ShortenContainer}/>
+          <Route path="/" component={LandingPage} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
         </Switch>
