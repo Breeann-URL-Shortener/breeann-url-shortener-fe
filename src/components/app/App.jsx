@@ -18,7 +18,7 @@ export default function App() {
       <AuthProvider>
         <Switch>
           <PrivateRoute exact path="/shorten" component={ShortenContainer}/>
-          <Route path="/" component={LandingPage} />
+          <Route exact path="/" component={LandingPage} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
         </Switch>
