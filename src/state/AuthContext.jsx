@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }) => {
     return postSignup(email, password)
     // store the signed up user in session
       .then(user => setSession(user))
-      // .then(() => history.push('/'))
+      .then(() => history.push('/shorten'))
       .catch(err => setError(err));
   };
     
@@ -37,7 +37,7 @@ export const AuthProvider = ({ children }) => {
     return postLogin(email, password)
       // store the logged in user in session
       .then(user => setSession(user))
-      // .then(() => history.push('/'))
+      .then(() => history.push('/shorten'))
       .catch(err => setError(err));
   };
 

@@ -8,6 +8,7 @@ export const createLink = url => {
     headers: {
       'Content-Type': 'application/json'
     },
+    credentials: 'include',
     body: JSON.stringify({ url })
   })
     .then(res => res.json())
