@@ -21,6 +21,7 @@ export const createLink = url => {
 export const fetchLinks = () => {
   return fetch(`${SHORTENER_BACKEND_URL}/api/v1/shorten`)
     .then(res => res.json())
+    .then(res => console.log(res, 'res'))
     .then(json => json.map(link => ({
       shortenedUrl: `${SHORTENER_BACKEND_URL}/${link.id}`, 
       originalUrl: link.originalUrl
