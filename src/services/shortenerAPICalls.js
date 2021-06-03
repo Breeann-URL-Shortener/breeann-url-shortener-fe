@@ -28,3 +28,20 @@ export const fetchLinks = () => {
       originalUrl: link.originalUrl
     })));
 };
+
+// fetch links
+export const fetchSavedLinks = userId => {
+  return fetch(`${SHORTENER_BACKEND_URL}/api/v1/shorten/${userId}`, {
+    method: 'GET', 
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    credentials: 'include'
+  })
+    .then(res => res.json())
+    // .then(res => console.log(res, 'res'))
+    .then(res => res.map(link => ({
+      shortenedUrl: `${SHORTENER_BACKEND_URL}/${link.id}`, 
+      originalUrl: link.originalUrl
+    })));
+};
