@@ -1,21 +1,25 @@
 import React, { useEffect, useState } from 'react';
-import { createLink, fetchLinks } from '../services/shortenerAPICalls';
+import { createLink, fetchSavedLinks } from '../services/shortenerAPICalls';
 import Form from '../components/form/Form';
 import ShortUrlList from '../components/shortener/ShortUrlList';
+import { useSession } from '../state/AuthContext';
 
 const ShortenContainer = () => {
   const [url, setUrl] = useState(''); 
   const [links, setLinks] = useState([]);
-
+  
+  const user = useSession();
+  console.log(user, 'user');
+  
   useEffect(() => {
-    fetchLinks()
+    fetchSavedLinks(user.id)
       .then(links => setLinks(ls => [...ls, ...links]));
   }, []);
 
   const handleSubmit = e => {
     e.preventDefault();
 
-    createLink(url)
+    createLink(url, user.id)
       .then(link => setLinks(links => [...links, link]));
   };
 
