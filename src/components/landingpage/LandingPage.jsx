@@ -20,9 +20,9 @@ const LandingPage = () => {
           <h2>Minuscurl transforms your long urls to be simple & minuscule.</h2>
           
           <p>
-            Within this app, you'll be able to take long urls and condense them, making them more manageable. That way, you can maximize the space on your own personal sites or social media accounts. 
+            Within this app you'll be able to take long urls and condense them, making them more manageable. This way, you can maximize the space on your own personal sites or social media accounts. 
             
-            You'll also have access to any past minuscule urls that you have created, so that you'll never lose track of your new links.
+            You'll also have access to any past minuscule urls that you have created so that you will never lose track of your new links!
           </p>
         
           <Link to="/signup">

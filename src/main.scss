@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&display=swap');
 
-
 // typography hierarchy 
 @mixin main-header-mobile {
     font-family: 'Baloo Tammudu 2', cursive;
@@ -36,6 +35,7 @@
     color: $light-gray;
 };
 
+// buttons and inputs
 @mixin button {
     color: $white;
     background-color: $secondary-green;
@@ -56,6 +56,26 @@
     }
 }
 
+@mixin input {
+    @include body-text();
+    width: 20rem;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid $secondary-green;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+@mixin link {
+    margin: 0; 
+    color: $dark-gray;
+    text-decoration: none;
+
+    &:hover {
+        color: $primary-yellow;
+    }
+}
 // main color pallette
 $black: #202020; 
 $dark-gray: #3F3F3F;
@@ -68,9 +88,10 @@ $primary-yellow: #F2AC34;
 $primary-orange: #F05A28; 
 
 // main gradients
-$blue-primary-green-gradient: linear-gradient(to right, $primary-orange, $primary-blue);
-$blue-primary-green-gradient: linear-gradient(to right, $primary-blue, $primary-green);
-$primary-secondary-greens-gradient: linear-gradient(to right, $primary-green, $secondary-green);
-$secondary-green-yellow-gradient: linear-gradient(to right, $secondary-green, $primary-yellow);
-$yellow-orange-gradient: linear-gradient(to right, $primary-yellow, $primary-orange);
-$full-gradient: linear-gradient(to right, $primary-blue, $primary-green, $secondary-green, $primary-yellow, $primary-orange, $primary-blue)
+$blue-primary-orange-gradient: linear-gradient($primary-blue, $primary-orange);
+$blue-primary-green-gradient: linear-gradient($primary-blue, $primary-green);
+$primary-secondary-greens-gradient: linear-gradient($primary-green, $secondary-green);
+$secondary-green-yellow-gradient: linear-gradient($secondary-green, $primary-yellow);
+$yellow-orange-gradient: linear-gradient($primary-yellow, $primary-orange);
+$full-gradient: linear-gradient( $primary-blue, $primary-green, $secondary-green, $primary-yellow, $primary-orange)
+

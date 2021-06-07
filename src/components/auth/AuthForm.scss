@@ -1,0 +1,70 @@
+@import 'src/main';
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    text-align: center;
+    align-items: center;
+    background: $yellow-orange-gradient;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    margin: auto;
+    margin-top: 10%;
+    width: 50%;
+    height: auto;
+
+    @media (max-width: 850px) {  
+        width: 80%;
+    }
+    
+    h1 {
+        @include sub-header;
+    }
+
+    img {
+        width: 80px;
+        margin-top: 4rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+
+    input {
+        @include input;
+
+        @media (max-width: 850px) {  
+            width: 15rem;
+        }
+
+        // &:valid {
+        //     // background: url('../../assets/verify.png');
+        //     background-color: $secondary-green;
+        //     background-size: 20px;
+        //     background-repeat: no-repeat;
+        //     background-position: 20px 20px;
+        // }
+
+    }
+
+    button {
+        @include button;
+        margin: 2rem;
+
+        @media (max-width: 850px) {  
+            width: 15rem;
+        }
+    }
+
+    a {
+        @include link;
+        margin-bottom: 4rem;
+    }
+
+
+}
