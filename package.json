@@ -15,7 +15,7 @@
     }
   },
   "scripts": {
-    "test": "jest --verbose",
+    "test": "react-scripts test --env=jsdom",
     "test:watch": "npm run test -- --watch",
     "start": "webpack serve --hot --mode development --devtool eval-source-map",
     "build": "webpack --devtool source-map"
@@ -63,6 +63,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "enzyme": "^3.11.0",
     "node-sass": "^6.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
