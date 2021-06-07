@@ -10,6 +10,7 @@ import Login from '../auth/Login';
 import Signup from '../auth/Signup';
 import PrivateRoute from '../auth/PrivateRoute';
 import { AuthProvider } from '../../state/AuthContext';
+import '../../main.scss';
 
 export default function App() {
   // Take in container
