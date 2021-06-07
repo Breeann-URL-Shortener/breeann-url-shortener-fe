@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&display=swap');
+
+// typography hierarchy 
+@mixin main-header-mobile {
+    font-family: 'Baloo Tammudu 2', cursive;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 1;
+    color: $primary-orange;
+}
+
+@mixin main-header {
+    font-family: 'Baloo Tammudu 2', cursive;
+    font-weight: 700;
+    font-size: 6rem;
+    line-height: 1;
+    color: $primary-orange;
+}
+
+@mixin sub-header {
+    font-family: 'Baloo Tammudu 2', cursive;
+    font-weight: 500;
+    line-height: 1;
+    font-size: 1.8rem;
+    color: $primary-blue;
+};
+
+@mixin body-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    color: $light-gray;
+};
+
+// buttons and inputs
+@mixin button {
+    color: $white;
+    background-color: $secondary-green;
+    border-color: $secondary-green;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border-width: 2px;
+    border-style: solid;
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    cursor: pointer; 
+    width: 20rem;
+    
+    &:hover {
+        background-color: $primary-green;
+        border-color: $primary-green;
+    }
+}
+
+@mixin input {
+    @include body-text();
+    width: 20rem;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid $secondary-green;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+@mixin link {
+    margin: 0; 
+    color: $dark-gray;
+    text-decoration: none;
+
+    &:hover {
+        color: $primary-yellow;
+    }
+}
+// main color pallette
+$black: #202020; 
+$dark-gray: #3F3F3F;
+$light-gray: #707070;
+$white: #FFFFFF;
+$primary-blue: #163F5F; 
+$primary-green: #00A551; 
+$secondary-green: #60CE00; 
+$primary-yellow: #F2AC34; 
+$primary-orange: #F05A28; 
+
+// main gradients
+$blue-primary-orange-gradient: linear-gradient($primary-blue, $primary-orange);
+$blue-primary-green-gradient: linear-gradient($primary-blue, $primary-green);
+$primary-secondary-greens-gradient: linear-gradient($primary-green, $secondary-green);
+$secondary-green-yellow-gradient: linear-gradient($secondary-green, $primary-yellow);
+$yellow-orange-gradient: linear-gradient($primary-yellow, $primary-orange);
+$full-gradient: linear-gradient( $primary-blue, $primary-green, $secondary-green, $primary-yellow, $primary-orange)
+

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailsPage component renders DetailsPage 1`] = `
+<DocumentFragment>
+  <section
+    class="auth-form"
+  >
+    <img
+      alt="miniscurl bug logo"
+      src="/path/image"
+    />
+    <h1>
+      Welcome Back! Please Login.
+    </h1>
+    <form>
+      <label>
+        <input
+          placeholder="Email"
+          required=""
+          type="email"
+          value=""
+        />
+      </label>
+      <input
+        placeholder="Password"
+        required=""
+        type="password"
+        value=""
+      />
+      <button>
+        Login
+      </button>
+      <a
+        href="/signup"
+      >
+        Not yet a member? Click here to sign up.
+      </a>
+    </form>
+  </section>
+</DocumentFragment>
+`;

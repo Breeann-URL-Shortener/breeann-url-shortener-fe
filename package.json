@@ -9,6 +9,7 @@
       "<rootDir>/src/setupTests.js"
     ],
     "moduleNameMapper": {
+      "^.+\\.(css|less|scss)$": "identity-obj-proxy",
       "\\.(css)$": "identity-obj-proxy",
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
     }
@@ -62,6 +63,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "enzyme": "^3.11.0",
     "node-sass": "^6.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

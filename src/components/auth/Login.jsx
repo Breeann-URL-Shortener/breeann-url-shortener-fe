@@ -4,7 +4,13 @@ import AuthForm from './AuthForm';
 
 const Login = () => {
   const login = useLogin();
-  return <AuthForm title="Login" authFn={login} />;
+  return <AuthForm 
+    title="Welcome Back! Please Login." 
+    action="Login" 
+    link="/signup"
+    redirectMessage="Not yet a member? Click here to sign up."
+    authFn={login} />;
 };
 
 export default Login;
+
