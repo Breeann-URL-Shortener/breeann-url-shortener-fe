@@ -1,0 +1,7 @@
+@import 'src/main';
+
+.shorten-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 'shortener links';
+}

@@ -1,0 +1,14 @@
+@import 'src/main';
+
+.shorturl-list {
+
+    ul {
+        list-style-type: none;
+    }
+    
+    li {
+        background-color: orange;
+        border-radius: 10px;
+        margin: 1rem;
+    }
+}

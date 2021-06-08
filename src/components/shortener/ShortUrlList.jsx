@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ShortUrl from './ShortUrl';
+import './ShortUrlList.scss';
 // import { useSession } from '../../state/AuthContext';
 
 const ShortUrlList = ({ links }) => {
@@ -15,9 +16,12 @@ const ShortUrlList = ({ links }) => {
 
   return (
     //   List of all links
-    <ul>
-      {linkEl}
-    </ul>
+    <div className="shorturl-list">
+      <p>My Urls:</p>
+      <ul>
+        {linkEl}
+      </ul>
+    </div>
   );
 };
 
