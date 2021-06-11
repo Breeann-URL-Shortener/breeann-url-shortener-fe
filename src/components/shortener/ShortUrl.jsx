@@ -19,7 +19,7 @@ function ShortUrl({ shortenedUrl, originalUrl }) {
       </div>
 
       <div className="buttons">
-        <button>Copy</button>
+        {/* <button>Copy</button> */}
         <button>Delete</button>
       </div>
       

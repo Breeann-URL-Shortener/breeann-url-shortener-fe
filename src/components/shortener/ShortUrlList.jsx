@@ -1,3 +1,6 @@
+/* eslint-disable max-len */
+/* eslint-disable react/no-unescaped-entities */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import ShortUrl from './ShortUrl';
@@ -17,7 +20,8 @@ const ShortUrlList = ({ links }) => {
   return (
     //   List of all links
     <div className="shorturl-list">
-      <p>My Urls:</p>
+      <h1>Your recent Minuscurls</h1>
+      {/* <p>Here's a list of all of your minuscurls and your original links for your later use.</p> */}
       <ul>
         {linkEl}
       </ul>

@@ -4,4 +4,12 @@
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-areas: 'shortener links';
+    background-image: url(../assets/background.png);
+    background-repeat: no-repeat;
+    height: auto;
+
+    background-size: cover;
+    // border: 3px solid orange;
+    // background-size: 100% 100%;
 }
+
