@@ -1,16 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './ShortUrl.scss';
+import buglogo from '../../assets/minuscurl_logo_bug.png';
 
 function ShortUrl({ shortenedUrl, originalUrl }) {
   return (
+    
     // individual url links
-    <p>
-      {originalUrl}
+    <section className="short-url-section">
+      <img src={buglogo} alt="bug logo" />
       
-      <a href={shortenedUrl}>
-        {shortenedUrl}
-      </a>
-    </p>
+      <div className="urls">
+        <h1>Your Long URL</h1>
+        <p>{originalUrl}</p>
+
+        <h1>Minuscurl</h1>
+        <p>{shortenedUrl}</p>
+      </div>
+
+      <div className="buttons">
+        {/* <button>Copy</button> */}
+        <button>Delete</button>
+      </div>
+      
+    </section>
   );
 }
 

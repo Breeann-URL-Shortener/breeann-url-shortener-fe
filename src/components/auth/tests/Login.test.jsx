@@ -5,7 +5,7 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import { MemoryRouter as Router } from 'react-router';
 import AuthForm from '../AuthForm';
-import { AuthProvider, useLogin } from '../../../state/AuthContext';
+import { AuthProvider } from '../../../state/AuthContext';
 
 describe('DetailsPage component', () => {
   afterEach(() => cleanup());

@@ -1,0 +1,22 @@
+@import 'src/main';
+
+.shorten-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 'shortener links';
+    background-image: url(../assets/background.png);
+    background-repeat: no-repeat;
+    height: auto;
+    background-size: cover;
+
+    @media (max-width: 1000px) {  
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+            'shortener' 
+            'links';
+    }
+    // border: 3px solid orange;
+    // background-size: 100% 100%;
+}
+

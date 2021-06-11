@@ -39,8 +39,9 @@
         @include input;
 
         @media (max-width: 850px) {  
-            width: 15rem;
+            width: auto;
         }
+
 
         // &:valid {
         //     // background: url('../../assets/verify.png');
@@ -57,12 +58,14 @@
         margin: 2rem;
 
         @media (max-width: 850px) {  
-            width: 15rem;
+            width: auto;
         }
     }
 
     a {
         @include link;
+        margin-left: 2rem;
+        margin-right: 2rem;
         margin-bottom: 4rem;
     }
 

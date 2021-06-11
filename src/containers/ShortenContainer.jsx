@@ -3,6 +3,7 @@ import { createLink, fetchSavedLinks } from '../services/shortenerAPICalls';
 import Form from '../components/form/Form';
 import ShortUrlList from '../components/shortener/ShortUrlList';
 import { useSession } from '../state/AuthContext';
+import './ShortenContainer.scss';
 
 const ShortenContainer = () => {
   const [url, setUrl] = useState(''); 
@@ -29,7 +30,7 @@ const ShortenContainer = () => {
   console.log(links, 'link');
 
   return (
-    <div>
+    <div className="shorten-container">
       {/* Takes in Form and List to contain */}
       <Form url={url} onSubmit={handleSubmit} onChange={handleChange} />
       <ShortUrlList links={links} />

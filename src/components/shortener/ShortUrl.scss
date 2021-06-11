@@ -1,0 +1,80 @@
+@import 'src/main';
+
+.short-url-section{
+    display: grid;
+    grid-template-columns: 15% 80%;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: $white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    grid-template-areas: 'logo urls';
+    grid-template-areas: 
+        'logo urls' 
+        '. buttons';
+    width: auto;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    // border: 3px solid $primary-orange;
+
+    @media (max-width: 1000px) {  
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    img {
+        grid-area: logo text;
+        align-self: center;
+        justify-self: center;
+        width: 4rem;
+    }
+
+    .urls {
+        grid-area: urls text;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 1rem;
+        word-break: break-word;
+        
+        @media (max-width: 1000px) {  
+            margin: 0;
+        }
+
+        h1 {
+            @include sub-header;
+            margin-bottom: 0;
+            margin-top: 1rem;
+
+            @media (max-width: 1000px) {  
+                font-size: 1.6rem;
+            }
+        }
+
+        p {
+            margin-top: 0;
+        }
+    }
+
+    .buttons {
+        grid-area: buttons;
+        // margin-left: 2rem;
+        justify-self: end;
+
+        button {
+            @include button;
+            width: 5rem;
+            text-align: center; 
+            font-size: 1rem;
+            line-height: 1;
+            margin-left: .5rem;
+            margin-right: 1rem;
+            margin-bottom: .5rem;
+            padding: 10px 10px;
+            
+        }
+    }
+}
