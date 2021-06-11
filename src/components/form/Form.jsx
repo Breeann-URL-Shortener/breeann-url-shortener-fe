@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
-import graphic from '../../assets/people3.jpg';
+import graphic from '../../assets/splash_image2.png';
 import './Form.scss';
 
 function Form({ onSubmit, url, onChange }) {
@@ -12,9 +12,10 @@ function Form({ onSubmit, url, onChange }) {
       <form onSubmit={onSubmit} >
       
         <h1>Shorten Your URL</h1>
+        <p>Click the Shorten button and new long url should appear to the right in a list of all of your minuscurls.</p>
         <input id="url" type="url" value={url} onChange={onChange} placeholder="Your Long URL"/>
         <button>Shorten</button>
-        <p>Click the Shorten button and new long url should appear to the right in a list of all of your minuscurls.</p>
+        
       </form>
     </section>
   );
