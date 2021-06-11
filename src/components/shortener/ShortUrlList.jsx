@@ -11,8 +11,8 @@ const ShortUrlList = ({ links }) => {
 
   console.log(links);
 
-  const linkEl = links.map(link => (
-    <li key={link.shortUrl} >
+  const linkEl = links.map((link, i) => (
+    <li key={i} >
       <ShortUrl {...link} />
     </li>
   ));

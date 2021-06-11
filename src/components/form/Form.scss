@@ -4,6 +4,8 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    grid-area: shortener;
+    height: auto;
     // justify-content: center;
     // border: 3px solid orange;
 
@@ -32,6 +34,10 @@
             margin-left: 2rem;
             margin-right: 2rem;
             text-align: center;
+            
+            @media (max-width: 1000px) {  
+                font-size: 2.8rem;
+            }
         }
 
         input {

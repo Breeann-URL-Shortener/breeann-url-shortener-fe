@@ -19,6 +19,13 @@
     margin-right: 2rem;
     // border: 3px solid $primary-orange;
 
+    @media (max-width: 1000px) {  
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        text-align: center;
+    }
+
     img {
         grid-area: logo text;
         align-self: center;
@@ -33,11 +40,18 @@
         margin-top: 1rem;
         word-break: break-word;
         
-        
+        @media (max-width: 1000px) {  
+            margin: 0;
+        }
+
         h1 {
             @include sub-header;
             margin-bottom: 0;
             margin-top: 1rem;
+
+            @media (max-width: 1000px) {  
+                font-size: 1.6rem;
+            }
         }
 
         p {
