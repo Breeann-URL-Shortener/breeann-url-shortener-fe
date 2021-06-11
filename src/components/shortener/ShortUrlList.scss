@@ -4,17 +4,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // border: 3px solid orange;
-    // width: 100%;
+    width: 100%;
 
     h1 {
         @include main-header;
-        margin-bottom: 2rem;
         font-size: 3rem;
+        margin-bottom: 0;
+        justify-self: center;
     }
 
     ul {
-        width: auto;
+        width: 100%;
         list-style-type: none;
         height: auto;
         padding: 0;
