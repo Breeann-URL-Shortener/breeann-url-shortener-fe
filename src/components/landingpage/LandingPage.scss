@@ -1,16 +1,18 @@
 @import 'src/main';
 
 .landing-page {
-
+    
     img {
         width: 100%;
         height: auto;
+        margin-top: 5rem;
 
+        
         @media (max-width: 1000px) {  
             height: auto;
             margin-bottom: 0;
-
             padding: 0;
+            margin-top: 6rem;
         }
 
     }

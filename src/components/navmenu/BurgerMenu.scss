@@ -1,0 +1,65 @@
+@import 'src/main';
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    right: 2rem;
+    top: 2rem;
+  }
+  
+  /* Color/shape of burger icon bars */
+  .bm-burger-bars {
+    background: $primary-orange;
+  }
+  
+  /* Color/shape of burger icon bars on hover*/
+  .bm-burger-bars-hover {
+    background: $primary-green;
+  }
+  
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    margin: 1rem;
+    height: 300px;
+    width: 300px;
+  }
+  
+  /* Color/shape of close button cross */
+  .bm-cross {
+    background: $white;
+  }
+  
+  /*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+  .bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+  }
+  
+  /* General sidebar styles */
+  .bm-menu {
+    background: $blue-primary-green-gradient;
+    padding: 2rem;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;;
+  }
+  
+  /* Wrapper for item list */
+  .bm-item-list {
+    padding: 1rem;
+  }
+  
+  /* Individual item */
+  .bm-item {
+    display: inline-block;
+  }
+  
+  /* Styling of overlay */
+  .bm-overlay {
+    width: auto;
+    background: $full-gradient;
+  }

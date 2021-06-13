@@ -1,0 +1,11 @@
+@import 'src/main';
+@import './BurgerMenu.scss';
+
+.NavMenu {
+
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+
+}
