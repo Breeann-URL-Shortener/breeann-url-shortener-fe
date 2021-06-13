@@ -1,5 +1,6 @@
+/* eslint-disable max-len */
 import React, { useEffect, useState } from 'react';
-import { createLink, fetchSavedLinks } from '../services/shortenerAPICalls';
+import { createLink, fetchSavedLinks, deleteLink } from '../services/shortenerAPICalls';
 import Form from '../components/form/Form';
 import ShortUrlList from '../components/shortener/ShortUrlList';
 import { useSession } from '../state/AuthContext';
@@ -11,6 +12,7 @@ const ShortenContainer = () => {
   
   const user = useSession();
   console.log(user, 'user');
+  console.log(url, 'url');
   
   useEffect(() => {
     fetchSavedLinks(user.id)
@@ -33,7 +35,7 @@ const ShortenContainer = () => {
     <div className="shorten-container">
       {/* Takes in Form and List to contain */}
       <Form url={url} onSubmit={handleSubmit} onChange={handleChange} />
-      <ShortUrlList links={links} />
+      <ShortUrlList links={links} url={url} />
     </div>
   );
 };

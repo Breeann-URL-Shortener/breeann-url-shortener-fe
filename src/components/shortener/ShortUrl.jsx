@@ -1,9 +1,25 @@
 import React from 'react';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 import './ShortUrl.scss';
 import buglogo from '../../assets/minuscurl_logo_bug.png';
+import { deleteLink } from '../../services/shortenerAPICalls';
 
 function ShortUrl({ shortenedUrl, originalUrl }) {
+  
+  const [links, setLinks] = useState([]);
+  const id = shortenedUrl.slice(32);
+  // const stringyId = JSON.stringify(id);
+  // console.log(typeof shortenedUrl, 'shortenedUrl');
+  console.log(id);
+
+  const handleUrlDelete = async (e) => {
+    e.preventDefault();
+    await deleteLink(id)
+      .then(link => setLinks(links => [...links, link]));
+    await window.location.reload();
+  };
+
   return (
     
     // individual url links
@@ -19,8 +35,11 @@ function ShortUrl({ shortenedUrl, originalUrl }) {
       </div>
 
       <div className="buttons">
+        <form onSubmit={handleUrlDelete}>
+          <button>Delete</button>  
+        </form>
         {/* <button>Copy</button> */}
-        <button>Delete</button>
+
       </div>
       
     </section>

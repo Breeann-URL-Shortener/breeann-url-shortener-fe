@@ -7,11 +7,14 @@ import ShortUrl from './ShortUrl';
 import './ShortUrlList.scss';
 // import { useSession } from '../../state/AuthContext';
 
-const ShortUrlList = ({ links }) => {
+const ShortUrlList = ({ links, onClick }) => {
 
   console.log(links);
 
+  
+
   const linkEl = links.map((link, i) => (
+
     <li key={i} >
       <ShortUrl {...link} />
     </li>
