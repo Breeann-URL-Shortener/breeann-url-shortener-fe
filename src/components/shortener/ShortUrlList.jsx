@@ -7,7 +7,7 @@ import ShortUrl from './ShortUrl';
 import './ShortUrlList.scss';
 // import { useSession } from '../../state/AuthContext';
 
-const ShortUrlList = ({ links, onClick }) => {
+const ShortUrlList = ({ links }) => {
 
   console.log(links);
 

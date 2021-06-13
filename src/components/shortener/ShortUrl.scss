@@ -62,9 +62,10 @@
 
     .buttons {
         grid-area: buttons;
+        display: flex;
+        flex-direction: row;
         // margin-left: 2rem;
         justify-self: end;
-
         button {
             @include button;
             width: 5rem;

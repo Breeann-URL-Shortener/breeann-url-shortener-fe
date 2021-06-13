@@ -20,6 +20,20 @@ function ShortUrl({ shortenedUrl, originalUrl }) {
     await window.location.reload();
   };
 
+  function copyToClipboard(text) {
+    const placeholder = document.createElement('textarea');
+    document.body.appendChild(placeholder);
+    placeholder.value = text;
+    placeholder.select();
+    document.execCommand('copy');
+    document.body.removeChild(placeholder);
+  }
+
+  const handleCopy = () => {
+    copyToClipboard(shortenedUrl);
+    console.log('hello');
+  };
+
   return (
     
     // individual url links
@@ -38,7 +52,7 @@ function ShortUrl({ shortenedUrl, originalUrl }) {
         <form onSubmit={handleUrlDelete}>
           <button>Delete</button>  
         </form>
-        {/* <button>Copy</button> */}
+        <button onClick={handleCopy}>Copy</button>
 
       </div>
       
