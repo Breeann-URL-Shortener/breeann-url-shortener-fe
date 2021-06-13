@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { getVerify, postLogin, postSignup } from '../services/auth';
+import { getVerify, postLogin, postSignup, getLogout } from '../services/auth';
 
 const AuthContext = createContext(null);
 
@@ -41,6 +41,15 @@ export const AuthProvider = ({ children }) => {
       .catch(err => setError(err));
   };
 
+  const logout = () => {
+    return getLogout()
+      .then(() => {
+        setSession(null);
+        history.push('/');
+      });
+  };
+
+
   return (
     <AuthContext.Provider value={{
       session,
@@ -48,7 +57,8 @@ export const AuthProvider = ({ children }) => {
       error,
       isAuthenticated,
       signup,
-      login
+      login,
+      logout
     }}>
       {children}
     </AuthContext.Provider>
@@ -83,4 +93,9 @@ export const useSignup = () => {
 export const useLogin = () => {
   const { login } = useContext(AuthContext);
   return login;
+};
+
+export const useLogout = () => {
+  const { logout } = useContext(AuthContext);
+  return logout;
 };

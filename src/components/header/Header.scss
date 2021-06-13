@@ -1,0 +1,14 @@
+@import 'src/main';
+
+.Header { 
+    background-color: $primary-blue;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    width: 100%;
+    
+    img {
+        width: 4rem;
+        margin: 1rem;
+    }
+}

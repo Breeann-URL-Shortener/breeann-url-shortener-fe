@@ -6,8 +6,9 @@
     grid-template-areas: 'shortener links';
     background-image: url(../assets/background.png);
     background-repeat: no-repeat;
-    height: auto;
+    height: 100%;
     background-size: cover;
+    background-size: 100% 100%;
 
     @media (max-width: 1000px) {  
         grid-template-columns: 100%;
@@ -15,8 +16,9 @@
         grid-template-areas: 
             'shortener' 
             'links';
+
+            background-image: none;
     }
     // border: 3px solid orange;
-    // background-size: 100% 100%;
 }
 

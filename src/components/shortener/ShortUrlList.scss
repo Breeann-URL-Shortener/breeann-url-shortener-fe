@@ -7,9 +7,11 @@
     width: 100%;
     height: auto;
     grid-area: links;
+    margin-top: 7rem;
     
     @media (max-width: 1000px) {  
         text-align: center;
+        margin-top: 0;
     }
 
     h1 {
