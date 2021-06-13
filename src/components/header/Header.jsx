@@ -6,7 +6,7 @@ import './Header.scss';
 function Header() {
   return (
     <div className="Header">
-      <img src={bugLogo} alt="bug logo"/>
+      {/* <img src={bugLogo} alt="bug logo"/> */}
       <NavMenu />
     </div>
   );
