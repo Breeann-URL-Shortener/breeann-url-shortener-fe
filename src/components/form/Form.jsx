@@ -14,7 +14,7 @@ function Form({ onSubmit, url, onChange }) {
         <h1>Shorten Your URL</h1>
         <p>Click the Shorten button and new long url should appear to the right in a list of all of your minuscurls.</p>
         <input id="url" type="url" value={url} onChange={onChange} placeholder="Your Long URL"/>
-        <button>Shorten</button>
+        <button onChange={onChange}>Shorten</button>
         
       </form>
     </section>
