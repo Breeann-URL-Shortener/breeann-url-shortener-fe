@@ -2,10 +2,25 @@
 @import './BurgerMenu.scss';
 
 .NavMenu {
+    width: 100%;
+    height: 5rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 
     a {
+        padding-top: .5rem;
         color: $white;
         text-decoration: none;
+    }
+
+    a:hover {
+        color: $primary-yellow;
+        cursor: pointer;
+    }
+
+    a:visited {
+        color: $light-gray;
     }
 
 }

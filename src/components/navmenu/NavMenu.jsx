@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 // built in slide animation from react-burger-menu
 import { slide as Menu } from 'react-burger-menu';
 import { useLogout, useSession } from '../../state/AuthContext';
+import bugLogo from '../../assets/minuscurl_logo_bug.png';
 import './NavMenu.scss';
 
 const NavMenu = () => {
@@ -18,7 +19,8 @@ const NavMenu = () => {
 
   return (
     <>
-      <div className="Header">
+      <div className="NavMenu">
+        <img src={bugLogo} alt="bug logo"/>
         {user
           ? (
             <>
@@ -30,6 +32,7 @@ const NavMenu = () => {
                 <a href="/shorten">Shortener</a>
                 <a href="/login">Login</a>
                 <a onClick={handleDelete} href="/">Log Out</a>
+                <a href="https://www.breeannbolinsky.com/">Meet the Dev</a>
               </Menu>
             </>
           ) : (
@@ -42,6 +45,7 @@ const NavMenu = () => {
                 <a href="/shorten">Shortener</a>
                 <a href="/login">Login</a>
                 <a href="/signup">Signup</a>
+                <a href="https://www.breeannbolinsky.com/">Meet the Dev</a>
               </Menu>
             </>
           )}
