@@ -2,6 +2,8 @@
 ___
 ## Minuscurl transforms your long urls to be simple & minuscule.
 Minuscurl is a Fullstack app, where you'll be able to take long urls and condense them, making them more manageable. This way, you can maximize the space on your own personal sites or social media accounts. You'll also have access to any past minuscule urls that you have created so that you will never lose track of your new links!
+
+### Please note, this app uses cookies, so you will need to make sure they are enabled to sign up and create minuscurls.  
 ___
 **Technologies Used for the Frontend:** 
 - React 
